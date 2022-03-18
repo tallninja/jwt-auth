@@ -1,0 +1,110 @@
+### root route
+GET http://localhost:5000/
+
+### all access content
+GET http://localhost:5000/api/test/all/
+
+### Signup user
+POST http://localhost:5000/api/auth/signup/
+Content-Type: application/json
+
+{
+    "username": "user",
+    "email": "user@email.com",
+    "password": "user123"
+}
+
+### Signin user
+POST http://localhost:5000/api/auth/signin/
+Content-Type: application/json
+
+{
+    "email": "user@email.com",
+    "password": "user123"
+}
+
+### Accessing user content without authentication
+GET http://localhost:5000/api/test/user/
+
+### Accessing user content with user privilleges
+GET http://localhost:5000/api/test/user/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzIyYTE1MjY4YjFmMDI5NjBjNWEyYyIsImlhdCI6MTY0NzQ1NTU1OCwiZXhwIjoxNjQ3NTQxOTU4fQ.tUxC4cJTZaL3Tzv0DmNcuPQq8-SNOgn3vSasXGSwbYs
+
+### Accessing moderator content with user privilleges
+GET http://localhost:5000/api/test/moderator/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzIyYTE1MjY4YjFmMDI5NjBjNWEyYyIsImlhdCI6MTY0NzQ1NTU1OCwiZXhwIjoxNjQ3NTQxOTU4fQ.tUxC4cJTZaL3Tzv0DmNcuPQq8-SNOgn3vSasXGSwbYs
+
+### Accessing admin content with user privilleges
+GET http://localhost:5000/api/test/admin/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzIyYTE1MjY4YjFmMDI5NjBjNWEyYyIsImlhdCI6MTY0NzQ1NTU1OCwiZXhwIjoxNjQ3NTQxOTU4fQ.tUxC4cJTZaL3Tzv0DmNcuPQq8-SNOgn3vSasXGSwbYs
+
+### Signup moderator
+POST http://localhost:5000/api/auth/signup/
+Content-Type: application/json
+
+{
+    "username": "moderator",
+    "email": "moderator@email.com",
+    "password": "moderator123",
+    "roles": ["moderator"]
+}
+
+### Signin moderator
+POST http://localhost:5000/api/auth/signin/
+Content-Type: application/json
+
+{
+    "email": "moderator@email.com",
+    "password": "moderator123"
+}
+
+### Accessing moderator content without authentication
+GET http://localhost:5000/api/test/moderator/
+
+### Accessing user content with moderator privilleges
+GET http://localhost:5000/api/test/user/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzIzMTNlMTY2ZTJlYzIzOGNmZDI5NCIsImlhdCI6MTY0NzQ1NzMyOSwiZXhwIjoxNjQ3NTQzNzI5fQ.DHc6RxabiSKwi45vL4jIKtbiB6ktZQ-SOtGdWP56OTg
+
+### Accessing moderator content with moderator privilleges
+GET http://localhost:5000/api/test/moderator/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzIzMTNlMTY2ZTJlYzIzOGNmZDI5NCIsImlhdCI6MTY0NzQ1NzMyOSwiZXhwIjoxNjQ3NTQzNzI5fQ.DHc6RxabiSKwi45vL4jIKtbiB6ktZQ-SOtGdWP56OTg
+
+### Accessing admin content with moderator privilleges
+GET http://localhost:5000/api/test/admin/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzIzMTNlMTY2ZTJlYzIzOGNmZDI5NCIsImlhdCI6MTY0NzQ1NzMyOSwiZXhwIjoxNjQ3NTQzNzI5fQ.DHc6RxabiSKwi45vL4jIKtbiB6ktZQ-SOtGdWP56OTg
+
+
+### Signup admin
+POST http://localhost:5000/api/auth/signup/
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "email": "admin@email.com",
+    "password": "admin123",
+    "roles": ["admin"]
+}
+
+### Signin admin
+POST http://localhost:5000/api/auth/signin/
+Content-Type: application/json
+
+{
+    "email": "admin@email.com",
+    "password": "admin123"
+}
+
+### Accessing admin content without authentication
+GET http://localhost:5000/api/test/admin/
+
+### Accessing user content with admin privilleges
+GET http://localhost:5000/api/test/user/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzIzMTUyMTY2ZTJlYzIzOGNmZDI5YyIsImlhdCI6MTY0NzQ1NzY3MSwiZXhwIjoxNjQ3NTQ0MDcxfQ.1nMkYQl_sSg47z740rQS0q7KhvPgGMyBVC-LtEktuyw
+
+### Accessing moderator content with admin privilleges
+GET http://localhost:5000/api/test/moderator/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzIzMTUyMTY2ZTJlYzIzOGNmZDI5YyIsImlhdCI6MTY0NzQ1NzY3MSwiZXhwIjoxNjQ3NTQ0MDcxfQ.1nMkYQl_sSg47z740rQS0q7KhvPgGMyBVC-LtEktuyw
+
+### Accessing admin content with admin privilleges
+GET http://localhost:5000/api/test/admin/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzIzMTUyMTY2ZTJlYzIzOGNmZDI5YyIsImlhdCI6MTY0NzQ1NzY3MSwiZXhwIjoxNjQ3NTQ0MDcxfQ.1nMkYQl_sSg47z740rQS0q7KhvPgGMyBVC-LtEktuyw
