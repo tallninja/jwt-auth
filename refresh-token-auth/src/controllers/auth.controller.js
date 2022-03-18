@@ -108,7 +108,7 @@ exports.signin = (req, res) => {
             (role) => `ROLE_${role.name.toUpperCase()}`
           );
           const token = jwt.sign({ id: user._id }, auth.jwtSecret, {
-            expiresIn: auth.expire,
+            expiresIn: auth.jwtExpiration,
           });
           const responseData = {
             id: user._id,

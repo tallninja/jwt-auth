@@ -4,6 +4,7 @@ module.exports = {
   },
   auth: {
     jwtSecret: process.env.JWT_SECRET,
-    expire: 60 * 60 * 24 * 1, // 1 day
+    jwtExpiration: 60 * 60 * 1, // 1 hour
+    jwtRefreshExpiration: 60 * 60 * 24 * 1, // 1 day
   },
 };
