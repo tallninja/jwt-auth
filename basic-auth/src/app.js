@@ -16,7 +16,7 @@ class App {
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
     app.use(
-      process.env.NODE_ENV == 'production' ? morgan('common') : morgan('dev')
+      process.env.NODE_ENV === 'production' ? morgan('common') : morgan('dev')
     );
     connectDataBase();
     app.use('/', routes);
