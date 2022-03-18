@@ -1,6 +1,10 @@
 const router = require('express').Router();
 
-const { signup, signin } = require('../controllers/auth.controller');
+const {
+  signup,
+  signin,
+  refreshToken,
+} = require('../controllers/auth.controller');
 const {
   checkUserExist,
   checkRolesExist,
@@ -9,5 +13,7 @@ const {
 router.post('/signin', signin);
 
 router.post('/signup', [checkUserExist, checkRolesExist], signup);
+
+router.get('/refreshToken', refreshToken);
 
 module.exports = router;

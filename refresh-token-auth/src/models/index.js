@@ -42,4 +42,5 @@ module.exports = {
   Role: Role,
   ROLES: ROLES,
   User: require('./User'),
+  RefreshToken: require('./RefreshToken'),
 };

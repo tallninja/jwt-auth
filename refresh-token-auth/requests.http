@@ -99,12 +99,21 @@ GET http://localhost:5000/api/test/admin/
 
 ### Accessing user content with admin privilleges
 GET http://localhost:5000/api/test/user/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzQ1NjVmYjgyYjgwZjBiMWE4MTk4OCIsImlhdCI6MTY0NzU5NzE1NiwiZXhwIjoxNjQ3NjgzNTU2fQ.OP0WTYe0nHbdOuK33Y6WgInb0PQ4EBPKRCGFX7rHjUY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzQ1NjVmYjgyYjgwZjBiMWE4MTk4OCIsImlhdCI6MTY0NzYwMjkxMSwiZXhwIjoxNjQ3NjA2NTExfQ.RMBjRccugEUJqVhG8wEoDCl8Ev7eHowdqm1M0BHTVts
 
 ### Accessing moderator content with admin privilleges
 GET http://localhost:5000/api/test/moderator/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzQ1NjVmYjgyYjgwZjBiMWE4MTk4OCIsImlhdCI6MTY0NzU5NzE1NiwiZXhwIjoxNjQ3NjgzNTU2fQ.OP0WTYe0nHbdOuK33Y6WgInb0PQ4EBPKRCGFX7rHjUY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzQ1NjVmYjgyYjgwZjBiMWE4MTk4OCIsImlhdCI6MTY0NzYwMjkxMSwiZXhwIjoxNjQ3NjA2NTExfQ.RMBjRccugEUJqVhG8wEoDCl8Ev7eHowdqm1M0BHTVts
 
 ### Accessing admin content with admin privilleges
 GET http://localhost:5000/api/test/admin/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzQ1NjVmYjgyYjgwZjBiMWE4MTk4OCIsImlhdCI6MTY0NzU5NzE1NiwiZXhwIjoxNjQ3NjgzNTU2fQ.OP0WTYe0nHbdOuK33Y6WgInb0PQ4EBPKRCGFX7rHjUY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzQ1NjVmYjgyYjgwZjBiMWE4MTk4OCIsImlhdCI6MTY0NzYwMjkxMSwiZXhwIjoxNjQ3NjA2NTExfQ.RMBjRccugEUJqVhG8wEoDCl8Ev7eHowdqm1M0BHTVts
+
+### Refresh Token
+GET http://localhost:5000/api/auth/refreshToken/
+Content-Type: application/json
+
+{
+    "refreshToken": "09df5576-fcbf-44eb-98e9-88a29c41dcc4"
+}
+
